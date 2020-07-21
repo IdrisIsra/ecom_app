@@ -7,14 +7,15 @@ import CartIcon from '../cart-icon/cart-icon.component'
 import CartDropdown from '../cart-dropdown/cart-dropdown.component'
 
 
+
 import { ReactComponent as Logo } from '../../assets/logo.svg'
 
 import './header.styles.scss';
 
-const Header = ({ currentUser, hidden }) => (
+const Header = ({ currentUser, hidden, toggleCart }) => (
     <div className='header'>
         <Link className='logo-container' to='/'>
-            <Logo className="logo"/>
+            <Logo className="logo" />
         </Link>
         <div className='options'>
             <Link className='option' to='/shop'>SHOP</Link>
@@ -25,7 +26,7 @@ const Header = ({ currentUser, hidden }) => (
                 :
                 <Link className='option' to='/signin'>SIGN IN</Link>
             }
-            <CartIcon/>
+            <CartIcon />
         </div>
         {
             (hidden) ?
@@ -38,6 +39,7 @@ const Header = ({ currentUser, hidden }) => (
     </div>
     
 )
+
 const mapStateToProps = ({ user: {currentUser}, cart:{hidden}}) => ({
     currentUser,
     hidden
