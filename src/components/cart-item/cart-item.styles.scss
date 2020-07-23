@@ -6,6 +6,10 @@
   
     img {
       width: 30%;
+
+      &.big-image {
+        height: 200px
+      }
     }
   
     .item-details {
