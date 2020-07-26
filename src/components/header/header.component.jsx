@@ -10,7 +10,7 @@ import { selectCurrentUser } from '../../redux/user/user.selectors'
 import { selectCartHidden } from '../../redux/cart/cart.selectors' 
 
 
-import { ReactComponent as Logo } from '../../assets/logo.svg'
+import { ReactComponent as Logo } from '../../assets/logo2.svg'
 
 import './header.styles.scss';
 
